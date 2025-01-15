@@ -12,6 +12,8 @@ async function checkWeather(city) {
     if(response.status == 404){
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
+        document.querySelector(".humidity").textContent = "%";
+        document.querySelector(".wind").textContent = "km/h";
     }
     else{
         var data = await response.json();
